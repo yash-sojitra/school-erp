@@ -1,11 +1,13 @@
-import React from 'react'
+import ProfileInfo from "./ProfileInfo";
+import Messages from "../Messages";
 
 const Stats = () => {
   return (
-    <div className='w-4/12 h-full border border-red-400'>
-      Stats
+    <div className="h-full rounded-3xl m-6 border bg-white shadow-2xl hidden md:inline">
+      <ProfileInfo/>
+      <Messages/>
     </div>
-  )
-}
+  );
+};
 
-export default Stats
+export default Stats;

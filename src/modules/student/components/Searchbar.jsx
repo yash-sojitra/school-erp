@@ -1,23 +1,24 @@
-import { Mail } from "lucide-react";
+import { Bell, Mail, Menu } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Searchbar = () => {
   return (
-    <div className="px-10 py-6 flex gap-10 items-center">
+    <div className="px-6 py-4 md:px-10 md:py-6 bg-white md:bg-transparent  flex md:gap-10 items-center justify-between md:justify-end">
+      <Menu className=" md:size-12 lg:hidden" onClick={()=>{console.log("helo");}}/>
       <input
         type="text"
         placeholder="Search"
-        className="w-full px-4 py-2 border rounded-full"
+        className="w-full px-4 py-2 border rounded-full hidden md:inline"
       />
 
-      <div className="icons grid gap-6 grid-cols-2">
+      <div className="icons grid gap-4 md:gap-8 lg:gap-6 grid-cols-2">
         {/* <div className="message size-9 p-4 w-full rounded-full border border-gray-400">
           <Mail />
         </div> */}
-          <Mail className="border border-gray-400 p-2 size-10 rounded-full" />
-          <Mail className="border border-gray-400 p-2 size-10 rounded-full" />
+          <Mail className="border border-gray-400 p-2 size-12 lg:size-10 rounded-full" />
+          <Bell  className="border border-gray-400 p-2 size-12 lg:size-10 rounded-full" />
       </div>
-      <div className="profile flex items-center gap-4">
+      <div className="profile items-center gap-4 hidden md:flex">
         <Avatar>
           <AvatarImage src="https://github.com/shadcn.png" />
           <AvatarFallback>CN</AvatarFallback>
