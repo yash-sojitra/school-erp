@@ -1,7 +1,7 @@
 import { MessageSquareMore } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-import { messages } from "../../assets/data/messages.json";
+import { messages } from "@/assets/data/messages.json";
 
 const Messages = () => {
 

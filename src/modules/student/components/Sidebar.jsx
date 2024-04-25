@@ -2,7 +2,7 @@ import { BadgeIndianRupee, CalendarClock, GraduationCap, Info, LayoutDashboard, 
 
 const Sidebar = () => {
   return (
-    <div className="sidebar z-[1] h-screen w-60 py-6 px-8 flex-col justify-between rounded-r-2xl shadow-xl bg-white hidden lg:flex">
+    <div className="sidebar z-[1] h-screen w-60 py-6 px-8 flex-col justify-between rounded-r-2xl shadow-xl bg-white hidden lg:flex lg:sticky lg:top-0">
         <div>
           <div className="text-4xl font-bold py-4">logo</div>
           <ul className="text-lg font-semibold">
