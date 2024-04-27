@@ -1,9 +1,14 @@
 import { BadgeIndianRupee, CalendarClock, GraduationCap, Info, LayoutDashboard, LibraryBig, LogOut, MessageCircleMore, Settings } from "lucide-react";
+// import OutsideClick from "../hooks/outsideClick";
 
-const Sidebar = () => {
+const Sidebar = ({sidebar}) => {
+
+  // const sidebara = OutsideClick();
+
   return (
-    <div className="sidebar z-[1] h-screen w-60 py-6 px-8 flex-col justify-between rounded-r-2xl shadow-xl bg-white hidden lg:flex lg:sticky lg:top-0">
+    <div className={` sidebar z-[1] h-screen w-60 py-6 px-8 flex-col justify-between rounded-r-2xl shadow-xl bg-white ${sidebar? 'flex absolute z-[1]' : 'hidden'}  lg:flex lg:sticky lg:top-0 `}>
         <div>
+          <div ></div>
           <div className="text-4xl font-bold py-4">logo</div>
           <ul className="text-lg font-semibold">
             <li className="flex gap-4 my-6 items-center"><LayoutDashboard/> Dashboard</li>
@@ -16,7 +21,7 @@ const Sidebar = () => {
           </ul>
         </div>
         <div>
-        <ul className="text-lg font-semibold">
+        <ul className='text-lg font-semibold' >
             <li className="flex gap-4 my-6 items-center"><Settings /> Settings</li>
             <li className="flex gap-4 my-6 items-center"><LogOut /> Logout</li>
         </ul>

@@ -1,10 +1,13 @@
 import { Bell, Mail, Menu } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-const Searchbar = () => {
+const Searchbar = ({sidebar, setSidebar}) => {
+
+  // const [sidebar, setSidebar] = useState(false);
+
   return (
     <div className="px-6 py-4 md:px-10 md:py-6 bg-white md:bg-transparent  flex md:gap-10 items-center justify-between md:justify-end">
-      <Menu className=" md:size-12 lg:hidden" onClick={()=>{console.log("helo");}}/>
+      <Menu className=" md:size-12 lg:hidden" onClick={()=>{setSidebar(true)}}/>
       <input
         type="text"
         placeholder="Search"

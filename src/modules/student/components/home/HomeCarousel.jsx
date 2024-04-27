@@ -11,7 +11,7 @@ import eventsImg from "@/assets/images/events.png";
 const MainContent = () => {
   return (
     <Carousel
-      className="border rounded-xl w-full md:w-11/12"
+      className="self-center border rounded-xl w-full md:w-full"
       opts={{
         loop: true,
       }}

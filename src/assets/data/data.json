@@ -1,0 +1,67 @@
+{
+  "messages": [
+    {
+      "id": 1,
+      "name": "Shanaya",
+      "message": "lorem ipsum dolor"
+    },
+    {
+      "id": 2,
+      "name": "Ankur",
+      "message": "lorem ipsum dolor"
+    },
+    {
+      "id": 2,
+      "name": "Ankur",
+      "message": "lorem ipsum dolor"
+    },
+    {
+      "id": 2,
+      "name": "Ankur",
+      "message": "lorem ipsum dolor"
+    }
+  ],
+
+  "books": [
+    {
+      "id": 1,
+      "url": "assets/library/1.png",
+      "subject": "Science"
+    },
+    {
+      "id": 2,
+      "url": "assets/library/2.png",
+      "subject": "Science"
+    },
+    {
+      "id": 3,
+      "url": "assets/library/3.png",
+      "subject": "Maths"
+    },
+    {
+      "id": 4,
+      "url": "assets/library/4.png",
+      "subject": "Computer Science"
+    },
+    {
+      "id": 5,
+      "url": "assets/library/5.png",
+      "subject": "Social Science"
+    },
+    {
+      "id": 6,
+      "url": "assets/library/6.png",
+      "subject": "Arts"
+    },
+    {
+      "id": 7,
+      "url": "assets/library/7.png",
+      "subject": "Social Science"
+    },
+    {
+      "id": 8,
+      "url": "assets/library/8.png",
+      "subject": "Maths"
+    }
+  ]
+}
