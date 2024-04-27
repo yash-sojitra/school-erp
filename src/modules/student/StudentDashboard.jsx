@@ -13,7 +13,6 @@ const StudentDashboard = () => {
     console.log(boxOutsideClick);
   },[boxOutsideClick])
 
-
   return (
     <div className="flex">
       <Sidebar sidebar = {sidebar}/>
