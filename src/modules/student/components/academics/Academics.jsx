@@ -3,7 +3,7 @@ import SideSection from "./SideSection"
 
 const Academics = () => {
   return (
-    <div className="flex w-full">
+    <div className="flex w-full ">
         <MainSection/>
       <SideSection/>
     </div>

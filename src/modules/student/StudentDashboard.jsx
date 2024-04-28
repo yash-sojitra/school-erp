@@ -1,24 +1,25 @@
 import { useEffect, useRef, useState } from "react";
-import Dashboard from "./components/Dashboard"
-import Sidebar from "./components/Sidebar"
+import Dashboard from "./components/Dashboard";
+import Sidebar from "./components/Sidebar";
 import OutsideClick from "./hooks/outsideClick";
 
 const StudentDashboard = () => {
-
   const [sidebar, setSidebar] = useState(false);
-  const boxOutsideClick = OutsideClick(Sidebar);
+  const boxRef = useRef(null)
+  const boxOutsideClick = OutsideClick(boxRef);
 
-  useEffect(()=>{
-    setSidebar(false);
-    console.log(boxOutsideClick);
-  },[boxOutsideClick])
+  useEffect(() => {
+    if(boxOutsideClick){
+      setSidebar(false)
+    }
+  }, [boxOutsideClick]);
 
   return (
     <div className="flex">
-      <Sidebar sidebar = {sidebar}/>
-      <Dashboard sidebar = {sidebar} setSidebar = {setSidebar}/>
+      <Sidebar sidebar={sidebar} boxRef={boxRef} />
+      <Dashboard sidebar={sidebar} setSidebar={setSidebar} />
     </div>
-  )
-}
+  );
+};
 
-export default StudentDashboard
+export default StudentDashboard;
