@@ -1,9 +1,9 @@
-import HomePage from "./home/HomePage";
-import Searchbar from "./Searchbar";
-import Stats from "./home/Stats";
+import HomePage from "./pages/HomePage";
+import Searchbar from "./components/Searchbar";
 import {createBrowserRouter, RouterProvider } from "react-router-dom";
-import Library from "./library/Library";
-import Academics from "./academics/Academics";
+import Library from "./pages/Library";
+import Academics from "./pages/Academics";
+import EventsPage from "./pages/EventsPage";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +17,10 @@ const router = createBrowserRouter([
   {
     path:'/academics',
     element:<Academics/>,
+  },
+  {
+    path:'/events',
+    element:<EventsPage/>
   }
 ]);
 

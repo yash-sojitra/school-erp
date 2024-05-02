@@ -1,5 +1,5 @@
-import MainSection from "./MainSection"
-import SideSection from "./SideSection"
+import MainSection from "../components/academics/MainSection"
+import SideSection from "../components/academics/SideSection"
 
 const Academics = () => {
   return (

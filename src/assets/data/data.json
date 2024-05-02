@@ -163,5 +163,19 @@
       "subject":"Maths",
       "message":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus interdum justo in lorem porttitor, fermentum porta tortor lobortis. Nullam at convallis ligula, sed maximus leo. Nulla lobortis blandit pellentesque. Morbi." 
     }
+  ],
+  "events":[
+    {
+      "title":"Annual Football Championship",
+      "date":"20-31 March, 2024",
+      "url":"assets/events/events.png",
+      "description":"Lorem ipsum dolor sit amet consectetur. Auctor libero metus consectetur fames. Morbi purus justo suspendisse et placerat. Bibendum urna commodo senectus faucibus vitae ultrices cursus venenatis. At viverra lectus sit ut cras ultrices tristique nascetur facilisi."
+    },
+    {
+      "title":"Annual Cricket Tournament",
+      "date":"1 - 7 April, 2024",
+      "url":"assets/events/events.png",
+      "description":"Lorem ipsum dolor sit amet consectetur. Auctor libero metus consectetur fames. Morbi purus justo suspendisse et placerat. Bibendum urna commodo senectus faucibus vitae ultrices cursus"
+    }
   ]
 }

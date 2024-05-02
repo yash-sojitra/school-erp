@@ -1,6 +1,6 @@
 import { LibraryBig } from "lucide-react";
-import Subject from "./Subject";
-import BookList from "./BookList";
+import Subject from "../components/library/Subject";
+import BookList from "../components/library/BookList";
 import { useState } from "react";
 
 const Subjects = [

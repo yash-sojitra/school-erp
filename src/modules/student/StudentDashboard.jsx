@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import Dashboard from "./components/Dashboard";
+import Dashboard from "./Dashboard";
 import Sidebar from "./components/Sidebar";
 import OutsideClick from "./hooks/outsideClick";
 
