@@ -4,6 +4,7 @@ import {createBrowserRouter, RouterProvider } from "react-router-dom";
 import Library from "./pages/Library";
 import Academics from "./pages/Academics";
 import EventsPage from "./pages/EventsPage";
+import Support from "./pages/Support";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path:'/events',
     element:<EventsPage/>
+  },
+  {
+    path:'/support',
+    element:<Support/>
   }
 ]);
 
