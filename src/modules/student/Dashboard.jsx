@@ -5,6 +5,7 @@ import Library from "./pages/Library";
 import Academics from "./pages/Academics";
 import EventsPage from "./pages/EventsPage";
 import Support from "./pages/Support";
+import ChatPage from "./pages/ChatPage";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path:'/support',
     element:<Support/>
+  },
+  {
+    path:'/chat',
+    element:<ChatPage/>
   }
 ]);
 

@@ -177,5 +177,37 @@
       "url":"assets/events/events.png",
       "description":"Lorem ipsum dolor sit amet consectetur. Auctor libero metus consectetur fames. Morbi purus justo suspendisse et placerat. Bibendum urna commodo senectus faucibus vitae ultrices cursus"
     }
+  ],
+  "teachers":[
+    {
+      "name":"Shanaya",
+      "designation":"Science Teacher",
+      "available": true
+    },
+    {
+      "name":"Shanaya",
+      "designation":"Science Teacher",
+      "available": true
+    },
+    {
+      "name":"Shanaya",
+      "designation":"Science Teacher",
+      "available": true
+    },
+    {
+      "name":"Shanaya",
+      "designation":"Science Teacher",
+      "available": true
+    },
+    {
+      "name":"Shanaya",
+      "designation":"Science Teacher",
+      "available": false
+    },
+    {
+      "name":"Shanaya",
+      "designation":"Science Teacher",
+      "available": true
+    }
   ]
 }

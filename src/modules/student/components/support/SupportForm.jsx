@@ -102,7 +102,7 @@ const SupportForm = () => {
               </FormItem>
             )}
           />
-          <Button type="submit" className="text-white bg-primary-foreground hover:text-primary-foreground">Submit</Button>
+          <Button type="submit" className="text-white w-full md:w-auto bg-primary-foreground hover:text-primary-foreground">Submit</Button>
         </form>
       </Form>
     </div>

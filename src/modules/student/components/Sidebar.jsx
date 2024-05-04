@@ -1,5 +1,6 @@
 import { BadgeIndianRupee, CalendarClock, GraduationCap, Info, LayoutDashboard, LibraryBig, LogOut, MessageCircleMore, Settings } from "lucide-react";
 // import OutsideClick from "../hooks/outsideClick";
+import { Outlet, Link } from "react-router-dom";
 
 const Sidebar = ({sidebar, boxRef}) => {
 
