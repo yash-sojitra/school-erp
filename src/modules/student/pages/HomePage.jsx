@@ -3,10 +3,10 @@ import Stats from "../components/home/Stats"
 
 const HomePage = () => {
   return (
-    <>
+    <div className="flex">
       <Home/>
       <Stats/>
-    </>
+    </div>
   )
 }
 
