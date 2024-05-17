@@ -17,7 +17,7 @@ const BookList = ({ filterSubs }) => {
   return (
     <div className="flex flex-wrap justify-evenly">
       {bookList.map((book) => {
-        return <img key={book.id} src={book.url} className="h-80 m-6" />;
+        return <img key={book.id} src={book.url} className="h-80 m-6" alt={book.id} />;
       })}
     </div>
   );
