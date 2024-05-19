@@ -4,42 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import OutsideClick from "./hooks/outsideClick";
 import Sidebar from "./components/Sidebar";
 
-// const router = createBrowserRouter([
-//   {
-//     element: <Dashboard />,
-//     children: [
-//       {
-//         path: "/",
-//         element: <HomePage />,
-//       },
-//       {
-//         path: "/library",
-//         element: <Library />,
-//       },
-//       {
-//         path: "/academics",
-//         element: <Academics />,
-//       },
-//       {
-//         path: "/events",
-//         element: <EventsPage />,
-//       },
-//       {
-//         path: "/support",
-//         element: <Support />,
-//       },
-//       {
-//         path: "/chat",
-//         element: <ChatPage />,
-//       },
-//       {
-//         path: "/fees",
-//         element: <FeesPayment />,
-//       },
-//     ],
-//   },
-// ]);
-
 const Dashboard = () => {
   const [sideBar, setSideBar] = useState(false);
   const boxRef = useRef(null);
