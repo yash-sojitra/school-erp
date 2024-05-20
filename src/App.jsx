@@ -1,48 +1,96 @@
 // import { useState } from 'react'
-import './App.css'
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Dashboard from './modules/student/Dashboard';
-import HomePage from './modules/student/pages/HomePage';
-import Library from './modules/student/pages/Library';
-import Academics from './modules/student/pages/Academics';
-import EventsPage from './modules/student/pages/EventsPage';
-import Support from './modules/student/pages/Support';
-import ChatPage from './modules/student/pages/ChatPage';
-import FeesPayment from './modules/student/pages/FeesPayment';
+import "./App.css";
+import { RouterProvider, createBrowserRouter, useNavigate } from "react-router-dom";
 
+// ui components export
+import Dashboard from "./modules/student/Dashboard";
+import Library from "./modules/student/pages/Library";
+import HomePage from "./modules/student/pages/HomePage";
+import Academics from "./modules/student/pages/Academics";
+import EventsPage from "./modules/student/pages/EventsPage";
+import Support from "./modules/student/pages/Support";
+import ChatPage from "./modules/student/pages/ChatPage";
+import FeesPayment from "./modules/student/pages/FeesPayment";
+import Login from "./modules/loginSignup/Login";
+import Signup from "./modules/loginSignup/Signup";
+import ProtectedRoute from "./auth/ProtectedRoute/ProtectedRoute";
+import { useEffect } from "react";
+// import Sidebar from "./components/Sidebar";
+// import OutsideClick from "./hooks/outsideClick";
 
 const router = createBrowserRouter([
   {
-    path:"/student",
-    element: <Dashboard />,
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/signup",
+    element: <Signup />,
+  },
+  {
+    path: "/",
+    element: (
+      <ProtectedRoute>
+        <Dashboard />
+      </ProtectedRoute>
+    ),
+
     children: [
       {
-        path: "/student/home",
-        element: <HomePage />,
+        path: "/",
+        element: (
+          <ProtectedRoute>
+            <HomePage />
+          </ProtectedRoute>
+        ),
       },
       {
-        path: "/student/library",
-        element: <Library />,
+        path: "/library",
+        element: (
+          <ProtectedRoute>
+            <Library />
+          </ProtectedRoute>
+        ),
       },
       {
-        path: "/student/academics",
-        element: <Academics />,
+        path: "/academics",
+        element: (
+          <ProtectedRoute>
+            <Academics />
+          </ProtectedRoute>
+        ),
       },
       {
-        path: "/student/events",
-        element: <EventsPage />,
+        path: "/events",
+        element: (
+          <ProtectedRoute>
+            <EventsPage />
+          </ProtectedRoute>
+        ),
       },
       {
-        path: "/student/support",
-        element: <Support />,
+        path: "/support",
+        element: (
+          <ProtectedRoute>
+            <Support />
+          </ProtectedRoute>
+        ),
       },
       {
-        path: "/student/chat",
-        element: <ChatPage />,
+        path: "/chat",
+        element: (
+          <ProtectedRoute>
+            <ChatPage />
+          </ProtectedRoute>
+        ),
       },
       {
-        path: "/student/fees",
-        element: <FeesPayment />,
+        path: "/fees",
+        element: (
+          <ProtectedRoute>
+            <FeesPayment />
+          </ProtectedRoute>
+        ),
       },
     ],
   },
@@ -54,7 +102,7 @@ function App() {
     <div className="flex">
       <RouterProvider router={router} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

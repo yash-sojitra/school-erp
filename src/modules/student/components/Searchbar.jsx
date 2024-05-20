@@ -1,9 +1,11 @@
 import { Bell, Mail, Menu } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useContext } from "react";
+import { AuthContext } from "@/auth/context/AuthContext";
 
 const Searchbar = ({sidebar, setSidebar}) => {
 
-  // const [sidebar, setSidebar] = useState(false);
+  const {data} = useContext(AuthContext);
 
   return (
     <div className="px-6 py-4 md:px-10 md:py-6 bg-white md:bg-transparent  flex md:gap-10 items-center justify-between md:justify-end">
@@ -26,7 +28,7 @@ const Searchbar = ({sidebar, setSidebar}) => {
           <AvatarImage src="https://github.com/shadcn.png" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
-        <p className="text-lg text-nowrap font-medium">Simran Singh</p>
+        <p className="text-lg text-nowrap font-medium">{data.name}</p>
       </div>
     </div>
   );
