@@ -93,7 +93,7 @@ const AuthProvider = ({ children }) => {
     <AuthContext.Provider
       value={{
         id: state.id,
-        data:state.data,
+        data: state.data,
         isAuthenticated: state.isAuthenticated,
         login,
         logout,
