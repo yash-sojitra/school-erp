@@ -17,13 +17,13 @@ const Sidebar = ({sidebar, boxRef}) => {
           <div className="text-4xl font-bold py-4">logo</div>
           <ul className="text-lg font-semibold">
             {/* <li className="flex gap-4 my-6 items-center"><LayoutDashboard/> Dashboard</li> */}
-            <li><Link to='/student/home' className="flex gap-4 my-6 items-center"><LayoutDashboard/> Dashboard</Link></li>
-            <li><Link to='/student/academics' className="flex gap-4 my-6 items-center"><GraduationCap />Academics</Link></li>
-            <li><Link to='/student/events' className="flex gap-4 my-6 items-center"><CalendarClock />Notices/Events</Link></li>
-            <li><Link to='/student/library' className="flex gap-4 my-6 items-center"><LibraryBig />Library</Link></li>
-            <li><Link to='/student/fees' className="flex gap-4 my-6 items-center"><BadgeIndianRupee />Fee Payment</Link></li>
-            <li><Link to='/student/chat' className="flex gap-4 my-6 items-center"><MessageCircleMore />Chat</Link></li>
-            <li><Link to='/student/support' className="flex gap-4 my-6 items-center"><Info />Support/help</Link></li>
+            <li><Link to='/' className="flex gap-4 my-6 items-center"><LayoutDashboard/> Dashboard</Link></li>
+            <li><Link to='/academics' className="flex gap-4 my-6 items-center"><GraduationCap />Academics</Link></li>
+            <li><Link to='/events' className="flex gap-4 my-6 items-center"><CalendarClock />Notices/Events</Link></li>
+            <li><Link to='/library' className="flex gap-4 my-6 items-center"><LibraryBig />Library</Link></li>
+            <li><Link to='/fees' className="flex gap-4 my-6 items-center"><BadgeIndianRupee />Fee Payment</Link></li>
+            <li><Link to='/chat' className="flex gap-4 my-6 items-center"><MessageCircleMore />Chat</Link></li>
+            <li><Link to='/support' className="flex gap-4 my-6 items-center"><Info />Support/help</Link></li>
           </ul>
         </div>
         <div>

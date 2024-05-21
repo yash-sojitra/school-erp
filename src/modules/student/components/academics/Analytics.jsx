@@ -11,7 +11,7 @@ const Analytics = () => {
       <div className="bg-white flex flex-col rounded-2xl shadow-lg p-6 w-full md:w-58 lg:w-64">
         <h1 className="text-xl lg:text-2xl font-bold">Attendance</h1>
         <p className="text-3xl font-bold my-6 self-center text-gray-600"><span className="text-4xl text-primary-foreground">70</span>%</p>
-        <div className="flex gap-2 text-primary-foreground">viewGrades <MoveRight /></div>
+        <div className="flex gap-2 text-primary-foreground">view Attendance<MoveRight /></div>
       </div>
       <div className="bg-white flex flex-col rounded-2xl shadow-lg p-6 w-full md:w-58 lg:w-64">
         <h1 className="text-xl lg:text-2xl font-bold">Student Rating</h1>
