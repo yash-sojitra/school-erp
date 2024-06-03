@@ -69,14 +69,6 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/support",
-        element: (
-          <ProtectedRoute>
-            <Support />
-          </ProtectedRoute>
-        ),
-      },
-      {
         path: "/chat",
         element: (
           <ProtectedRoute>

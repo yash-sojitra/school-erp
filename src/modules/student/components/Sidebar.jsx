@@ -23,7 +23,6 @@ const Sidebar = ({sidebar, boxRef}) => {
             <li><Link to='/library' className="flex gap-4 my-6 items-center"><LibraryBig />Library</Link></li>
             <li><Link to='/fees' className="flex gap-4 my-6 items-center"><BadgeIndianRupee />Fee Payment</Link></li>
             <li><Link to='/chat' className="flex gap-4 my-6 items-center"><MessageCircleMore />Chat</Link></li>
-            <li><Link to='/support' className="flex gap-4 my-6 items-center"><Info />Support/help</Link></li>
           </ul>
         </div>
         <div>

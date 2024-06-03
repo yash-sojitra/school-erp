@@ -36,7 +36,7 @@ const AuthProvider = ({ children }) => {
     const token = localStorage.getItem("token");
 
     async function fetchData(id) {
-      const response = await axios.get(`https://erp-system-backend.onrender.com/api/v1/student/1/fetch/${id}`)
+      const response = await axios.get(`https://erp-system-backend.onrender.com/api/v1/student/6/fetch/${id}`)
       return response.data.data;
     }
 
@@ -64,7 +64,7 @@ const AuthProvider = ({ children }) => {
 
     //axios implementation
     const response = await axios.post(
-      `https://erp-system-backend.onrender.com/api/v1/student/1/login`,
+      `https://erp-system-backend.onrender.com/api/v1/student/login`,
       credentials
     );
     const data = response.data;
@@ -74,7 +74,7 @@ const AuthProvider = ({ children }) => {
       localStorage.setItem("token", data.token);
       const { id } = jwtDecode(data.token);
 
-      const response = await axios.get(`https://erp-system-backend.onrender.com/api/v1/student/1/fetch/${id}`)
+      const response = await axios.get(`https://erp-system-backend.onrender.com/api/v1/student/6/fetch/${id}`)
       console.log(response.data.data);
       const studentData = response.data.data;
 

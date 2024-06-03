@@ -1,19 +1,14 @@
-import { BadgeIndianRupee } from "lucide-react"
+import { BadgeIndianRupee } from "lucide-react";
+import StudentDetails from "../components/fees/StudentDetails";
+import FeesDetails from "../components/fees/FeesDetails";
 
 const FeesPayment = () => {
   return (
     <div className="flex w-full gap-6 mx-6">
-      <div className="details w-3/12 border border-red-600">
-        hlw
-      </div>
-      <div className="fees w-9/12 flex flex-col items-center p-6 border border-red-600">
-        <div className="flex gap-2 text-3xl font-bold items-center"><BadgeIndianRupee className="text-primary-foreground size-12" /> Fee Details</div>
-        <div>
-            
-        </div>
-      </div>
+      <StudentDetails />
+      <FeesDetails />
     </div>
-  )
-}
+  );
+};
 
-export default FeesPayment
+export default FeesPayment;
