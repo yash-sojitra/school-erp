@@ -40,3 +40,10 @@ export function formatDate(inputString) {
     // Combine formatted parts with separator
     return `${dayOfWeek}, ${day}-${month}-${year}`;
   }
+
+export function dateTimeFormatter(date, timeString) {
+    let [hours, minutes] = timeString.split(':').map(Number);
+    let newDate = new Date(date.setHours(hours, minutes));
+    console.log(newDate);
+    return newDate
+}

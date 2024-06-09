@@ -18,7 +18,7 @@ const Attendance = ({ attendanceArr }) => {
           <DialogTitle>Attendance in all the classes</DialogTitle>
         </DialogHeader>
         {attendanceArr.map((item)=>{
-            return <AttSubject key={item.subject} subject={item.subject} data={item.data}/>
+            return <AttSubject key={item.subjectId} subject={item.subjectName} data={item.percentage}/>
         })}
       </DialogContent>
     </Dialog>
