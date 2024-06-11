@@ -34,7 +34,7 @@ const Assignments = ({ setTotalGrade }) => {
       if (results.length > 0) {
         const averageScore = tempTotal / results.length;
         console.log(averageScore);
-        setTotalGrade(averageScore);
+        setTotalGrade(averageScore.toFixed(2));
       } else {
         console.error("No results data available");
       }

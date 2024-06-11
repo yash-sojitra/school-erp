@@ -27,9 +27,9 @@ const EventsPage = () => {
 
   return (
     <div className="flex flex-col mx-6 mb-6">
-      <EventCarousel />
+      <EventCarousel events={events} />
       <h1 className="my-6 text-3xl font-bold">Upcoming Events</h1>
-      <div className=" w-full xl:w-10/12">
+      <div className="grid xl:grid-cols-2 gap-4">
         {events.map((event) => {
           return <EventPoster event={event} />;
         })}

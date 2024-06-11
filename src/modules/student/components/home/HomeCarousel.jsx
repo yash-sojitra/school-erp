@@ -3,12 +3,33 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-
 import Autoplay from "embla-carousel-autoplay";
-
-import eventsImg from "@/assets/images/events.png";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const MainContent = () => {
+
+  const [events, setEvents] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect( () => {
+    async function fetchData() {
+      try{
+        const response = await axios.get(
+          "https://erp-system-backend.onrender.com/api/v1/event/fetchAll"
+        );
+        // console.log(response.data.data);
+        setEvents(response.data.data);
+        console.log(events);
+      }
+      catch(err){
+        console.error(err);
+      }
+    }
+    fetchData();
+  }, []);
+
   return (
     <Carousel
       className="self-center border rounded-xl w-full md:w-full"
@@ -21,19 +42,12 @@ const MainContent = () => {
         }),
       ]}
     >
-      <CarouselContent className="">
-        <CarouselItem className="flex justify-center">
-          <img src={eventsImg} alt="" className="w-full rounded-xl" />
-        </CarouselItem>
-        <CarouselItem className="flex justify-center">
-          <img src={eventsImg} alt="" className="w-full rounded-xl" />
-        </CarouselItem>
-        <CarouselItem className="flex justify-center">
-          <img src={eventsImg} alt="" className="w-full rounded-xl" />
-        </CarouselItem>
-        <CarouselItem className="flex justify-center">
-          <img src={eventsImg} alt="" className="w-full rounded-xl" />
-        </CarouselItem>
+      <CarouselContent className="h-96">
+      {events.map((event) => (
+          <CarouselItem key={events.id} className="flex justify-center">
+            <img src={event.photo} alt="" className="w-full rounded-xl bg-cover" onClick={()=>{navigate("/events")}} />
+          </CarouselItem>
+        ))}
       </CarouselContent>
       {/* <CarouselPrevious />
           <CarouselNext /> */}
