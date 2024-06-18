@@ -1,15 +1,5 @@
-import react from "react";
 import { AuthContext } from "@/auth/context/AuthContext";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
 import axios from "axios";
-import { Clock10 } from "lucide-react";
 import { useContext, useEffect, useState } from "react";
 import { format } from "date-fns";
 import { Calendar as CalendarIcon } from "lucide-react";
@@ -51,8 +41,8 @@ const weekday = [
 const TimeTable = () => {
   const { data } = useContext(AuthContext);
   const [timeTable, setTimeTable] = useState(initTable);
-  const [dayTable, setDayTable] = useState([]);
   const [error, setError] = useState(false);
+  const [dayTable, setDayTable] = useState([]);
   const [date, setDate] = useState(new Date());
   // console.log("timetable");
 

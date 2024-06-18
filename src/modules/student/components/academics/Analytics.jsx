@@ -3,12 +3,16 @@ import axios from "axios";
 import { MoveRight, StarIcon } from "lucide-react";
 import { useContext, useEffect, useState } from "react";
 import Attendance from "./Attendance";
+import Results from "./Results";
 
-const Analytics = ({ totalGrade }) => {
+const Analytics = () => {
+
   const { data } = useContext(AuthContext);
   const studentID = data.id;
   const [attendanceArr, setAttendanceArr] = useState([]);
   let [totAttendance, setTotAttendance] = useState(0);
+
+  const [totalGrade, setTotalGrade] = useState(0);
 
   async function fetchAtt() {
     try {
@@ -43,7 +47,7 @@ const Analytics = ({ totalGrade }) => {
           /100
         </p>
         <div className="flex gap-2 text-primary-foreground">
-          viewGrades <MoveRight />
+          <Results setTotalGrade={setTotalGrade}/>
         </div>
       </div>
       <div className="bg-white flex flex-col rounded-2xl shadow-lg p-6 w-full md:w-58 lg:w-64">

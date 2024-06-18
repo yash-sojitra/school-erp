@@ -1,4 +1,6 @@
+import { AuthContext } from "@/auth/context/AuthContext";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { useContext } from "react";
 
 const details = {
     name : "Simran Singh",
@@ -11,10 +13,13 @@ const details = {
 }
 
 const StudentDetails = () => {
+
+  const {data} = useContext(AuthContext)
+
   return (
     <div className="details w-3/12 bg-white rounded-xl shadow-lg">
       <Avatar className="size-36 m-auto mt-10">
-        <AvatarImage src="https://github.com/shadcn.png" />
+        <AvatarImage src={data.photo} />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
       <div className="text-center my-4">

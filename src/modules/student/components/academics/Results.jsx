@@ -4,8 +4,16 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "@/auth/context/AuthContext";
 import axios from "axios";
 
-const Assignments = ({ setTotalGrade }) => {
-  
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
+const Results = ({ setTotalGrade }) => {
   const { data } = useContext(AuthContext);
   const [results, setResults] = useState([]);
 
@@ -25,39 +33,40 @@ const Assignments = ({ setTotalGrade }) => {
     fetchData();
   }, []);
 
-  useEffect(()=>{
-
+  useEffect(() => {
     let tempTotal = 0;
-      results.map((subject) => {
-        tempTotal += subject.scoredMarks;
-      });
-      if (results.length > 0) {
-        const averageScore = tempTotal / results.length;
-        console.log(averageScore);
-        setTotalGrade(averageScore.toFixed(2));
-      } else {
-        console.error("No results data available");
-      }
-  },[results])
+    results.map((subject) => {
+      tempTotal += subject.scoredMarks;
+    });
+    if (results.length > 0) {
+      const averageScore = tempTotal / results.length;
+      console.log(averageScore);
+      setTotalGrade(averageScore.toFixed(2));
+    } else {
+      console.error("No results data available");
+    }
+  }, [results]);
 
   return (
-    <div className="bg-primary m-6 rounded-xl px-6">
-      <div className="heading text-2xl font-bold flex gap-2 items-center justify-center pt-6">
-        <NotepadText /> Result
-      </div>
-
-      <div className="grid grid-rows-4 divide-y-2 divide-white pb-2 ">
-        {results.map((subject) => {
-          return (
-            <Assignment
-              subject={subject.subjectName}
-              obtMarks={subject.scoredMarks}
-              totalMarks={subject.totalMarks}
-            />
-          );
-        })}
-      </div>
-    </div>
+    <Dialog>
+      <DialogTrigger className="flex gap-2 text-primary-foreground">viewGrades <MoveRight /></DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Result</DialogTitle>
+        </DialogHeader>
+        <div className="grid grid-rows-4 divide-y-2 divide-white pb-2 ">
+          {results.map((subject) => {
+            return (
+              <Assignment
+                subject={subject.subjectName}
+                obtMarks={subject.scoredMarks}
+                totalMarks={subject.totalMarks}
+              />
+            );
+          })}
+        </div>
+      </DialogContent>
+    </Dialog>
   );
 };
 
@@ -79,4 +88,4 @@ const Assignment = ({ subject, obtMarks, totalMarks }) => {
   );
 };
 
-export default Assignments;
+export default Results;

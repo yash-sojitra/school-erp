@@ -44,7 +44,7 @@ const MainContent = () => {
     >
       <CarouselContent className="h-96">
       {events.map((event) => (
-          <CarouselItem key={events.id} className="flex justify-center">
+          <CarouselItem key={events.id} className="flex justify-center cursor-pointer">
             <img src={event.photo} alt="" className="w-full rounded-xl bg-cover" onClick={()=>{navigate("/events")}} />
           </CarouselItem>
         ))}

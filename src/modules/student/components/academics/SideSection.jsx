@@ -1,4 +1,4 @@
-import Assignments from "./Assignments"
+import Assignments from "./Results"
 
 const SideSection = ({setTotalGrade}) => {
   return (
