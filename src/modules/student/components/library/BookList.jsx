@@ -1,31 +1,31 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const BookList = ({ filterSubs }) => {
-  const [bookList, setBookList] = useState([]);
-  const [error, setError] = useState(false);
+const BookList = ({bookList, filterSubs, error }) => {
+  // const [bookList, setBookList] = useState([]);
+  // const [error, setError] = useState(false);
 
-  async function fetchBooks() {
-    try {
-      const response = await axios.get(
-        "https://erp-system-backend.onrender.com/api/v1/library/fetch-books"
-      );
-      console.log(response.data.data);
+  // async function fetchBooks() {
+  //   try {
+  //     const response = await axios.get(
+  //       "https://erp-system-backend.onrender.com/api/v1/library/fetch-books"
+  //     );
+  //     console.log(response.data.data);
 
-      if (!response.data.data.length) {
-        setError("no books to available");
-      } else {
-        setBookList(response.data.data);
-      }
-    } catch (err) {
-      console.log(err);
-      setError("error fetching data");
-    }
-  }
+  //     if (!response.data.data.length) {
+  //       setError("no books to available");
+  //     } else {
+  //       setBookList(response.data.data);
+  //     }
+  //   } catch (err) {
+  //     console.log(err);
+  //     setError("error fetching data");
+  //   }
+  // }
 
-  useEffect(() => {
-    fetchBooks();
-  }, []);
+  // useEffect(() => {
+  //   fetchBooks();
+  // }, []);
 
   return (
     <div className="flex flex-wrap justify-evenly">
