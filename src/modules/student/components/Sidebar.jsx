@@ -11,9 +11,8 @@ import {
   Settings,
 } from "lucide-react";
 import { useContext } from "react";
-// import OutsideClick from "../hooks/outsideClick";
+import { useNavigate } from "react-router-dom";
 import { Outlet, Link } from "react-router-dom";
-
 import {
   Dialog,
   DialogContent,
@@ -25,9 +24,13 @@ import {
 import { Button } from "@/components/ui/button";
 
 const Sidebar = ({ sidebar, boxRef }) => {
-  // const sidebara = OutsideClick();
-
   const { logout } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
+  };
 
   return (
     <div
@@ -40,7 +43,6 @@ const Sidebar = ({ sidebar, boxRef }) => {
         <div></div>
         <div className="text-4xl font-bold py-4">logo</div>
         <ul className="text-lg font-semibold">
-          {/* <li className="flex gap-4 my-6 items-center"><LayoutDashboard/> Dashboard</li> */}
           <li>
             <Link to="/" className="flex gap-4 my-6 items-center">
               <LayoutDashboard /> Dashboard
@@ -83,22 +85,21 @@ const Sidebar = ({ sidebar, boxRef }) => {
           <li className="flex gap-4 my-6 items-center">
             <Settings /> Settings
           </li>
-          <li
-            className="flex gap-4 my-6 items-center cursor-pointer"
-            
-          >
-          <Dialog>
-            <DialogTrigger className="flex gap-4 my-6 items-center cursor-pointer"><LogOut /> Logout</DialogTrigger>
-            <DialogContent>
-              <DialogHeader>
-                <DialogTitle>Are you absolutely sure?</DialogTitle>
-                <DialogDescription>
-                  Are you sure you want to log out of the platform!
-                </DialogDescription>
-              </DialogHeader>
-                  <Button onClick={logout}>Logout</Button>
-            </DialogContent>
-          </Dialog>
+          <li className="flex gap-4 my-6 items-center cursor-pointer">
+            <Dialog>
+              <DialogTrigger className="flex gap-4 my-6 items-center cursor-pointer">
+                <LogOut /> Logout
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>Are you absolutely sure?</DialogTitle>
+                  <DialogDescription>
+                    Are you sure you want to log out of the platform!
+                  </DialogDescription>
+                </DialogHeader>
+                <Button onClick={handleLogout}>Logout</Button>
+              </DialogContent>
+            </Dialog>
           </li>
         </ul>
       </div>

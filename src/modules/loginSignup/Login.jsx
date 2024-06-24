@@ -50,7 +50,7 @@ const Login = () => {
   }
 
   return (
-    <div className="flex w-full h-full items-center">
+    <div className="flex w-screen h-screen justify-center items-center">
       <Card className="w-[350px]">
         <CardHeader>
           <CardTitle>Student Login</CardTitle>
