@@ -3,20 +3,17 @@ import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 const ProtectedRoute = ({ children }) => {
-
   const { data, isAuthenticated } = useContext(AuthContext);
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (data == null) {
-      console.log("heding login page");
+    if (data === null && !isAuthenticated) {
       navigate("/login", { replace: true });
-    }
-    else {
+    } else {
       setLoading(false);
     }
-  }, [data, navigate]);
+  }, [data, isAuthenticated, navigate]);
 
   if (loading) {
     return <div>Loading...</div>;
